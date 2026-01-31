@@ -1,0 +1,29 @@
+.main-container {
+  padding: 20px 40px;
+}
+
+.unorder-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive padding */
+@media screen and (max-width: 992px) {
+  .main-container {
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding: 20px;
+  }
+
+  .unorder-list {
+    gap: 20px;
+  }
+}
