@@ -54,5 +54,9 @@ class ProductDetails extends Component {
   }
 }
 
-// Helper to use `useParams` in class component
-export default props => <ProductDetails {...props} params={useParams()} />
+const ProductDetailsWrapper = props => {
+  const params = useParams()
+  return <ProductDetails {...props} params={params} />
+}
+
+export default ProductDetailsWrapper
