@@ -6,7 +6,7 @@ const Header = () => {
 
   const onClickLogout = () => {
     localStorage.removeItem('isLoggedIn')
-    navigate('/')
+    navigate('/login')
   }
 
   return (
