@@ -5,6 +5,7 @@ const Header = () => {
   const navigate = useNavigate()
 
   const onClickLogout = () => {
+    localStorage.removeItem('isLoggedIn')
     navigate('/')
   }
 
@@ -13,17 +14,23 @@ const Header = () => {
       <h1 className="logo-head">AB</h1>
 
       <ul className="sub-container">
-        <li className="trigger-button">
-          <Link to="/" className="nav-link">Home</Link>
-        </li>
+        
+          <Link to="/" className="nav-link">
+          <li className="trigger-button">Home </li>
+          </Link>
+       
 
-        <li className="trigger-button">
-          <Link to="/products" className="nav-link">Products</Link>
-        </li>
+        <Link to="/products" className="nav-link">
+          <li className="trigger-button">Products </li>
+          </Link>
 
-        <li className="trigger-button">
-          <Link to="/cart" className="nav-link">Cart</Link>
-        </li>
+         <Link to="/cart" className="nav-link">
+          <li className="trigger-button">Cart </li>
+          </Link>
+
+           <Link to="/login" className="nav-link">
+          <li className="trigger-button">login </li>
+          </Link>
       </ul>
 
       <button
